@@ -1,6 +1,9 @@
 pipeline {
     agent any
-        stages {
+    environment {
+        CI = 'true' 
+    }
+    stages {
         stage('Build') {
             steps {
                 sh 'npm install'
